@@ -99,7 +99,54 @@ def findings(results, rows, names):
             f"The fairest major tokenizer is <b>{html.escape(best_t)}</b>; the least fair is "
             f"<b>{html.escape(worst_t)}</b> (median language).",
         ))
+    base = _baselines(head)
+    if base:
+        ref_t, ref_n = _reference(head)
+        hi_t, hi_n = max(base, key=lambda x: x[1])
+        if hi_n >= 1.2 * ref_n:
+            out.append((
+                f"{hi_n / ref_n:.2f}×",
+                f"<b>{html.escape(hi_t)}</b> needs {hi_n / ref_n:.2f}× as many tokens as <b>{html.escape(ref_t)}</b> "
+                "for the same <i>English</i> text, so its lower ratios do not mean lower absolute cost.",
+            ))
     return out
+
+
+def _baselines(results):
+    """(tokenizer, English token count), cheapest first; the absolute scale behind every ratio."""
+    return sorted(((r["tokenizer"], r["langs"][BASE]["tokens"]) for r in results if BASE in r["langs"]),
+                  key=lambda x: x[1])
+
+
+def _reference(head):
+    """The first headline tokenizer in display order (GPT-4o's o200k_base when present) as the absolute yardstick."""
+    r = next(r for r in head if BASE in r["langs"])
+    return r["tokenizer"], r["langs"][BASE]["tokens"]
+
+
+def _absolute(results, names):
+    head = headline(results)
+    base = _baselines(head)
+    if not base:
+        return ""
+    ref_t, ref_n = _reference(head)
+    picks = [lg for lg in ("slk_Latn", "deu_Latn", "hin_Deva", "jpn_Jpan") if all(lg in r["langs"] for r in head)]
+    by = {r["tokenizer"]: r for r in head}
+    hdr = ("<tr><th>Tokenizer</th><th>English tokens</th><th>vs " + html.escape(ref_t) + "</th>" +
+           "".join(f"<th>{html.escape(names.get(lg, lg))}<small>tokens · ratio</small></th>" for lg in picks) + "</tr>")
+    trs = []
+    for t, n in base:
+        cells = "".join(
+            f"<td data-v={by[t]['langs'][lg]['tokens']}>{by[t]['langs'][lg]['tokens']:,} · "
+            f"{by[t]['langs'][lg]['ratio_vs_en']:.2f}×</td>" for lg in picks)
+        trs.append(f"<tr><td>{html.escape(t)}</td><td data-v={n}>{n:,}</td><td data-v={n / ref_n:.3f}>{n / ref_n:.2f}×</td>{cells}</tr>")
+    return (
+        "<h2>Ratios vs absolute tokens</h2>"
+        "<p class=note>Each ratio compares a language with English <i>on the same tokenizer</i>. Tokenizers differ in how many "
+        "tokens they spend on English itself, so a lower ratio does not always mean fewer tokens. Token counts below are for "
+        "the whole FLORES-200 devtest set; prices per token also differ by model (see data.json).</p>"
+        f"<div class='card wrap'><table>{hdr}<tbody>{''.join(trs)}</tbody></table></div>"
+    )
 
 
 CSS = """
@@ -299,7 +346,7 @@ def render(results, names=None, has_og=False):
     blob = json.dumps(data, ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/")
     return (
         _head(has_og) + _jsonld(results, len(rows)) + "</head><body><main>" + INTRO +
-        f"<div class=kpis>{kpis}</div>" + picker + table + method + _foot() +
+        f"<div class=kpis>{kpis}</div>" + picker + table + _absolute(results, names) + method + _foot() +
         f"</main><script type=application/json id=d>{blob}</script><script>{JS}</script></body></html>\n"
     )
 

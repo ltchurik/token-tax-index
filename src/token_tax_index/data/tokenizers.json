@@ -200,22 +200,11 @@
       "group": "Regional"
     },
     {
-      "name": "Claude Opus 5.5 (API)",
-      "kind": "anthropic",
-      "id": "claude-opus-5-5",
-      "group": "Anthropic"
-    },
-    {
-      "name": "Claude Sonnet 5.5 (API)",
+      "name": "Claude Opus / Sonnet / Haiku 5.5 (API)",
       "kind": "anthropic",
       "id": "claude-sonnet-5-5",
-      "group": "Anthropic"
-    },
-    {
-      "name": "Claude Haiku 5.5 (API)",
-      "kind": "anthropic",
-      "id": "claude-haiku-5-5",
-      "group": "Anthropic"
+      "group": "Anthropic",
+      "note": "Counted with claude-sonnet-5-5. Opus, Sonnet and Haiku 5.5 returned identical counts on a 6,120-text sample (30 sentences x 204 languages), 2026-11-14."
     },
     {
       "name": "Claude Sonnet 4.6 (API)",

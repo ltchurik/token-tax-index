@@ -13,6 +13,7 @@ class TokenizerSpec:
     kind: str
     id: str
     group: str = ""
+    note: str = ""
 
 
 def read_data(name, path=None):
