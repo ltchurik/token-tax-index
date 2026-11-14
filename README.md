@@ -1,5 +1,7 @@
 # Token Tax Index
 
+[![Token Tax Index: how much more each language costs in LLM tokens than English](.github/social-preview.png)](https://github.com/ltchurik/token-tax-index)
+
 **How much more does each language cost in LLM tokens?** An open, regularly refreshed index of the "token tax": how many more tokens the same content needs in 200 languages than in English, across the tokenizers of current LLMs, translated into what it means for your API bill and context window.
 
 [![ci](https://github.com/ltchurik/token-tax-index/actions/workflows/ci.yml/badge.svg)](https://github.com/ltchurik/token-tax-index/actions/workflows/ci.yml)
