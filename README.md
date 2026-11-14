@@ -65,8 +65,24 @@ Contributions are welcome, especially new tokenizers in `tokenizers.json`, price
 
 A `CITATION.cff` with a DOI will be added with the first published results. Until then, please cite the repository URL.
 
+## Author
+
+Created and maintained by **[Ľubomír Tchurik](https://lubomirtchurik.sk)**, a Linux and PostgreSQL infrastructure specialist from Bratislava, Slovakia, working on LLM evaluation and AI-agent security.
+
+[Website](https://lubomirtchurik.sk) · [GitHub](https://github.com/ltchurik) · [LinkedIn](https://www.linkedin.com/in/lubomir-tchurik/) · [ORCID](https://orcid.org/0009-0005-8053-9405)
+
+If this project is useful to you, a ⭐ on GitHub helps others find it.
+
+### More open-source projects by the author
+
+- [sk-llm-eval](https://github.com/ltchurik/sk-llm-eval): Does your LLM write correct Slovak? 207-task language quality benchmark
+- [sk-tokenizer-bench](https://github.com/ltchurik/sk-tokenizer-bench): the Slovak token tax across 30+ LLM tokenizers
+- [llm-locale-lint](https://github.com/ltchurik/llm-locale-lint): CLDR-based checker of numbers, dates, money and quotes in LLM output
+- [localebench](https://github.com/ltchurik/localebench): do LLMs write like a native? Locale conventions benchmark
+- [sk-asr-bench](https://github.com/ltchurik/sk-asr-bench): how well AI understands spoken Slovak
+- [pgupcheck](https://github.com/ltchurik/pgupcheck): will your PostgreSQL major upgrade break anything?
+- [mcp-jail](https://github.com/ltchurik/mcp-jail): sandbox for MCP servers: egress allowlist, fs scope, audit log
+
 ## License
 
 Code: MIT. FLORES-200 is © Meta Platforms, Inc., CC BY-SA 4.0. It is downloaded at run time and not included in this repository.
-
-Made by [Ľubomír Tchurik](https://lubomirtchurik.sk).

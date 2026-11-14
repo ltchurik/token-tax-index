@@ -11,7 +11,7 @@ license = "MIT"
 license-files = ["LICENSE"]
 requires-python = ">=3.10"
 authors = [{ name = "Ľubomír Tchurik" }]
-keywords = ["llm", "tokenizer", "multilingual", "benchmark", "fairness", "flores-200", "token-cost"]
+keywords = ["llm", "tokenizer", "tokenization", "multilingual", "benchmark", "leaderboard", "fairness", "flores-200", "token-cost", "llm-pricing", "nlp", "low-resource-languages"]
 classifiers = [
   "Development Status :: 2 - Pre-Alpha",
   "Intended Audience :: Science/Research",
