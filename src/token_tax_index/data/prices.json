@@ -1,0 +1,96 @@
+{
+  "as_of": "2026-11-14",
+  "note": "Standard-tier list prices in USD per 1M tokens, short-context rates. Only models whose tokenizer is measured in this repo are listed. Prices change often - PRs welcome.",
+  "models": [
+    {
+      "vendor": "OpenAI",
+      "model": "gpt-5",
+      "input": 1.25,
+      "output": 10.0,
+      "tokenizer": "GPT-4o / 4.1 / 5 (o200k_base)",
+      "source": "https://developers.openai.com/api/docs/pricing"
+    },
+    {
+      "vendor": "OpenAI",
+      "model": "gpt-5-mini",
+      "input": 0.25,
+      "output": 2.0,
+      "tokenizer": "GPT-4o / 4.1 / 5 (o200k_base)",
+      "source": "https://developers.openai.com/api/docs/pricing"
+    },
+    {
+      "vendor": "OpenAI",
+      "model": "gpt-4.1",
+      "input": 2.0,
+      "output": 8.0,
+      "tokenizer": "GPT-4o / 4.1 / 5 (o200k_base)",
+      "source": "https://developers.openai.com/api/docs/pricing"
+    },
+    {
+      "vendor": "OpenAI",
+      "model": "gpt-4o",
+      "input": 2.5,
+      "output": 10.0,
+      "tokenizer": "GPT-4o / 4.1 / 5 (o200k_base)",
+      "source": "https://developers.openai.com/api/docs/pricing"
+    },
+    {
+      "vendor": "OpenAI",
+      "model": "gpt-4o-mini",
+      "input": 0.15,
+      "output": 0.6,
+      "tokenizer": "GPT-4o / 4.1 / 5 (o200k_base)",
+      "source": "https://developers.openai.com/api/docs/pricing"
+    },
+    {
+      "vendor": "Anthropic",
+      "model": "claude-opus-5-5",
+      "input": 4.0,
+      "output": 20.0,
+      "tokenizer": "Claude Opus 5.5 (API)",
+      "source": "https://platform.claude.com/docs/en/about-claude/pricing"
+    },
+    {
+      "vendor": "Anthropic",
+      "model": "claude-sonnet-5-5",
+      "input": 2.0,
+      "output": 10.0,
+      "tokenizer": "Claude Sonnet 5.5 (API)",
+      "source": "https://platform.claude.com/docs/en/about-claude/pricing"
+    },
+    {
+      "vendor": "Anthropic",
+      "model": "claude-haiku-5-5",
+      "input": 0.1,
+      "output": 0.5,
+      "tokenizer": "Claude Haiku 5.5 (API)",
+      "source": "https://platform.claude.com/docs/en/about-claude/pricing"
+    },
+    {
+      "vendor": "Anthropic",
+      "model": "claude-sonnet-4-6",
+      "input": 3.0,
+      "output": 15.0,
+      "tokenizer": "Claude Sonnet 4.6 (API)",
+      "source": "https://platform.claude.com/docs/en/about-claude/pricing"
+    },
+    {
+      "vendor": "Google",
+      "model": "gemini-3.8-flash",
+      "input": 0.75,
+      "output": 3.75,
+      "tokenizer": "Gemini 3.8 Flash (API)",
+      "source": "https://aistudio.google.com/docs/pricing",
+      "note": "rises to $1.50 / $7.50 on 2027-01-01"
+    },
+    {
+      "vendor": "Google",
+      "model": "gemini-4-argon",
+      "input": 4.0,
+      "output": 20.0,
+      "tokenizer": "Gemini 4 Argon (API)",
+      "source": "https://aistudio.google.com/docs/pricing",
+      "note": "list price from 2026-12-01; intro price $2 / $10 until then"
+    }
+  ]
+}

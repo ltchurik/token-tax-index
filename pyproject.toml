@@ -1,0 +1,42 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "token-tax-index"
+version = "0.1.0.dev0"
+description = "How much more does each language cost in LLM tokens? Token ratios vs English and API cost across 100+ languages and current tokenizers."
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+requires-python = ">=3.10"
+authors = [{ name = "Ľubomír Tchurik" }]
+keywords = ["llm", "tokenizer", "multilingual", "benchmark", "fairness", "flores-200", "token-cost"]
+classifiers = [
+  "Development Status :: 2 - Pre-Alpha",
+  "Intended Audience :: Science/Research",
+  "Programming Language :: Python :: 3",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence",
+  "Topic :: Text Processing :: Linguistic",
+]
+dependencies = ["numpy>=1.26"]
+
+[project.optional-dependencies]
+# Local tokenizers (downloaded from the Hugging Face Hub / tiktoken on first use)
+local = ["tiktoken>=0.8", "tokenizers>=0.20", "huggingface_hub>=0.25", "sentencepiece>=0.2"]
+# Closed tokenizers counted through vendor token-count APIs (need ANTHROPIC_API_KEY / GEMINI_API_KEY)
+api = ["anthropic>=0.70", "google-genai>=1.0"]
+dev = ["pytest>=8"]
+
+[project.scripts]
+tti = "token_tax_index.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/ltchurik/token-tax-index"
+Author = "https://lubomirtchurik.sk"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/token_tax_index"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

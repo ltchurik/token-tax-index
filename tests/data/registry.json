@@ -1,0 +1,4 @@
+{"tokenizers": [
+  {"name": "Whitespace (test)", "kind": "whitespace", "id": "", "group": "Test"},
+  {"name": "UTF-8 bytes (reference)", "kind": "utf8-bytes", "id": "", "group": "Reference"}
+]}

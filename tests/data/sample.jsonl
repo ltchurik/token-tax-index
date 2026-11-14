@@ -1,0 +1,5 @@
+{"id": 0, "domain": "everyday", "eng_Latn": "The train to Bratislava leaves at eight in the morning.", "slk_Latn": "Vlak do Bratislavy odchádza o ôsmej ráno.", "deu_Latn": "Der Zug nach Bratislava fährt um acht Uhr morgens ab."}
+{"id": 1, "domain": "everyday", "eng_Latn": "Please send me the invoice by Friday.", "slk_Latn": "Pošlite mi, prosím, faktúru do piatku.", "deu_Latn": "Bitte schicken Sie mir die Rechnung bis Freitag."}
+{"id": 2, "domain": "tech", "eng_Latn": "The server restarted after the kernel update.", "slk_Latn": "Server sa po aktualizácii jadra reštartoval.", "deu_Latn": "Der Server wurde nach dem Kernel-Update neu gestartet."}
+{"id": 3, "domain": "tech", "eng_Latn": "Tokenizers trained on English split other languages into more pieces.", "slk_Latn": "Tokenizéry trénované na angličtine delia iné jazyky na viac častí.", "deu_Latn": "Auf Englisch trainierte Tokenizer zerlegen andere Sprachen in mehr Teile."}
+{"id": 4, "domain": "news", "eng_Latn": "Heavy snow closed several mountain roads on Tuesday.", "slk_Latn": "Husté sneženie v utorok uzavrelo viaceré horské cesty.", "deu_Latn": "Starker Schneefall sperrte am Dienstag mehrere Bergstraßen."}

@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+dist/
+build/
+*.egg-info/
+# Downloaded corpora (CC BY-SA, fetched with `tti fetch-corpus`, not committed)
+/data/
+# Generated site (built in CI from results/)
+/site/

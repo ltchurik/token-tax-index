@@ -1,0 +1,1 @@
+{"as_of": "test", "models": [{"vendor": "Test", "model": "ws-model", "input": 2.0, "output": 8.0, "tokenizer": "Whitespace (test)"}]}
