@@ -12,7 +12,8 @@ from .registry import read_data
 REPO = "https://github.com/ltchurik/token-tax-index"
 SITE = "https://ltchurik.github.io/token-tax-index/"
 AUTHOR = "Ľubomír Tchurik"
-AUTHOR_URL = "https://lubomirtchurik.sk"
+AUTHOR_URL = "https://lubomirtchurik.sk/"
+FIRST_PUBLISHED = "2026-11-14"  # first deploy of the leaderboard
 
 # Column order on the page. Unknown groups go after these, "Reference" always last.
 GROUP_ORDER = ["OpenAI", "Anthropic", "Google", "Meta", "Mistral", "China", "European", "Other", "Regional"]
@@ -235,13 +236,16 @@ def _jsonld(results, n_langs):
     meta = results[0] if results else {}
     data = {
         "@context": "https://schema.org", "@type": "Dataset",
+        "@id": f"{SITE}#dataset",
         "name": "Token Tax Index",
         "description": "Token count of the same text in each language relative to English, per LLM tokenizer, on FLORES-200.",
         "url": SITE, "sameAs": REPO, "license": "https://opensource.org/licenses/MIT",
-        "creator": {"@type": "Person", "name": AUTHOR, "url": AUTHOR_URL},
+        "creator": {"@type": "Person", "@id": f"{AUTHOR_URL}#person", "name": AUTHOR, "url": AUTHOR_URL},
         "keywords": ["LLM", "tokenizer", "token tax", "multilingual", "API pricing", "FLORES-200"],
         "isBasedOn": "https://github.com/facebookresearch/flores",
+        "datePublished": FIRST_PUBLISHED,
         "dateModified": meta.get("measured_at", ""),
+        "version": meta.get("measured_at", ""),
         "variableMeasured": "tokens relative to English",
         "measurementTechnique": f"{len(results)} tokenizers × {n_langs} languages, parallel sentences",
         "distribution": {"@type": "DataDownload", "encodingFormat": "application/json", "contentUrl": f"{SITE}data.json"},
