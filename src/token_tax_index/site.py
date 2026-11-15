@@ -14,6 +14,7 @@ SITE = "https://ltchurik.github.io/token-tax-index/"
 AUTHOR = "Ľubomír Tchurik"
 AUTHOR_URL = "https://lubomirtchurik.sk/"
 FIRST_PUBLISHED = "2026-11-14"  # first deploy of the leaderboard
+CONCEPT_DOI = "10.5281/zenodo.24253588"  # Zenodo, resolves to the latest release
 
 # Column order on the page. Unknown groups go after these, "Reference" always last.
 GROUP_ORDER = ["OpenAI", "Anthropic", "Google", "Meta", "Mistral", "China", "European", "Other", "Regional"]
@@ -242,7 +243,10 @@ def _jsonld(results, n_langs):
         "url": SITE, "sameAs": REPO, "license": "https://opensource.org/licenses/MIT",
         "creator": {"@type": "Person", "@id": f"{AUTHOR_URL}#person", "name": AUTHOR, "url": AUTHOR_URL},
         "keywords": ["LLM", "tokenizer", "token tax", "multilingual", "API pricing", "FLORES-200"],
+        "identifier": f"https://doi.org/{CONCEPT_DOI}",
         "isBasedOn": "https://github.com/facebookresearch/flores",
+        # Google's Dataset docs: articles to cite in addition to the dataset itself
+        "citation": "NLLB Team et al. No Language Left Behind: Scaling Human-Centered Machine Translation. arXiv:2207.04672, 2022.",
         "datePublished": FIRST_PUBLISHED,
         "dateModified": meta.get("measured_at", ""),
         "version": meta.get("measured_at", ""),

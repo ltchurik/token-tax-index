@@ -7,6 +7,7 @@
 [![ci](https://github.com/ltchurik/token-tax-index/actions/workflows/ci.yml/badge.svg)](https://github.com/ltchurik/token-tax-index/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-blue.svg)](pyproject.toml)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24253588.svg)](https://doi.org/10.5281/zenodo.24253588)
 
 **Live leaderboard: [ltchurik.github.io/token-tax-index](https://ltchurik.github.io/token-tax-index/)**, 204 languages × 35 tokenizers, including Claude via Anthropic's token-counting API.
 
@@ -78,7 +79,7 @@ Contributions are welcome, especially new tokenizers in `tokenizers.json`, price
 
 ## Citing
 
-See [CITATION.cff](CITATION.cff) (GitHub's "Cite this repository" button renders it). Every release is archived on Zenodo. If you use the numbers, please also cite NLLB Team, *No Language Left Behind: Scaling Human-Centered Machine Translation* (2022).
+See [CITATION.cff](CITATION.cff) (GitHub's "Cite this repository" button renders it). Every release is archived on Zenodo; the DOI [10.5281/zenodo.24253588](https://doi.org/10.5281/zenodo.24253588) covers all versions. If you use the numbers, please also cite NLLB Team, *No Language Left Behind: Scaling Human-Centered Machine Translation* (2022).
 
 ## Author
 

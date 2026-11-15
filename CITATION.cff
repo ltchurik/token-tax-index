@@ -8,6 +8,10 @@ authors:
     given-names: Ľubomír
     orcid: "https://orcid.org/0009-0005-8053-9405"
     website: "https://lubomirtchurik.sk/"
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.24253588"
+    description: "Concept DOI, resolves to the latest version"
 repository-code: "https://github.com/ltchurik/token-tax-index"
 url: "https://ltchurik.github.io/token-tax-index/"
 license: MIT
