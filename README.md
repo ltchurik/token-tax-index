@@ -78,7 +78,7 @@ Contributions are welcome, especially new tokenizers in `tokenizers.json`, price
 
 ## Citing
 
-A `CITATION.cff` with a DOI will be added with the first published results. Until then, please cite the repository URL.
+See [CITATION.cff](CITATION.cff) (GitHub's "Cite this repository" button renders it). Every release is archived on Zenodo. If you use the numbers, please also cite NLLB Team, *No Language Left Behind: Scaling Human-Centered Machine Translation* (2022).
 
 ## Author
 

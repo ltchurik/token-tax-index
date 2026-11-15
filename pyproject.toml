@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "token-tax-index"
-version = "0.1.0.dev0"
+version = "0.1.0"
 description = "How much more does each language cost in LLM tokens? Token ratios vs English and API cost across 100+ languages and current tokenizers."
 readme = "README.md"
 license = "MIT"

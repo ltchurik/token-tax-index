@@ -1,0 +1,38 @@
+cff-version: 1.2.0
+message: "If you use the Token Tax Index in your work, please cite it using the metadata below."
+type: software
+title: "Token Tax Index"
+abstract: "How much more does each language cost in LLM tokens? Token count of the same text in 203 languages relative to English, measured with 34 LLM tokenizers (OpenAI, Claude, Llama, Gemma, Mistral, Qwen, DeepSeek and others) plus a UTF-8 byte baseline on the FLORES-200 devtest (1012 professionally translated sentences), translated into API cost and context-window penalty, with a live leaderboard that shows both ratios and absolute token counts."
+authors:
+  - family-names: Tchurik
+    given-names: Ľubomír
+    orcid: "https://orcid.org/0009-0005-8053-9405"
+    website: "https://lubomirtchurik.sk/"
+repository-code: "https://github.com/ltchurik/token-tax-index"
+url: "https://ltchurik.github.io/token-tax-index/"
+license: MIT
+version: 0.1.0
+date-released: 2026-11-15
+keywords:
+  - llm
+  - tokenizer
+  - tokenization
+  - token tax
+  - multilingual
+  - benchmark
+  - leaderboard
+  - fairness
+  - flores-200
+  - token cost
+  - llm pricing
+  - nlp
+  - low-resource languages
+references:
+  - type: article
+    title: "No Language Left Behind: Scaling Human-Centered Machine Translation"
+    authors:
+      - name: "NLLB Team"
+    year: 2022
+    identifiers:
+      - type: other
+        value: "arXiv:2207.04672"
